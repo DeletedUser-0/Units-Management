@@ -1,0 +1,36 @@
+#x {
+    font-size: 110%;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+.centerb {
+    display: flex;
+    margin: auto;
+}
+
+#term {
+    font-size: 115%;
+}
+
+#results {
+    text-align: center;
+    font-size: 150%;
+}
+
+#wait {
+    text-align: center;
+    color: gray;
+}
+
+#final {
+    font-size: 200%;
+    text-align: center;
+}
+
+#autoterm {
+    position: relative;
+    bottom: 25px;
+}

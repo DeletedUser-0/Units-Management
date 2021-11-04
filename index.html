@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/OmegaNum.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="js/other.js"></script>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <table style="width:100%; text-align: center;">
+            <td id="x"></td>
+            <td>
+                <p><button onclick="subbase()">-</button> Base: <span id="base"></span> <button onclick="addbase()">+</button> <br> <button onclick="subexp()">-</button> Exponent: <span id="exp"></span> <button onclick="addexp()">+</button>
+                <p id="units"></p>
+            </td>
+            <td>
+                <p id="mult"></p>
+                <button onclick="prestige()">Prestige</button>
+            </td>
+            <td>
+                <div id="cheaptag1">
+                    <p id="chD1"></p>
+                </div>
+                <div id="cheaptag2">
+                    <p id="chD2"></p>
+                </div>
+            </td>
+        </table>
+        <br>
+        <button id="term" onclick="term()" class="centerb">Next term</button> <button id="autoterm" onclick="autoterm()"></button>
+        <button onclick="reseterm()" class="centerb">Reset term to 1</button>
+        <button onclick="resetrun()" class="centerb" style="color: red;">Reset run</button>
+        <p id="wait"></p>
+        <p id="results"></p>
+        <p id="final"></p>
+        <br>
+        <button onclick="result_x()" class="centerb">Make result into x</button>
+        <br>
+        <br>
+        <button onclick="up1()" id="up1"></button>
+        <button onclick="up2()" id="up2"></button>
+        <button onclick="up3()" id="up3"></button>
+        <button onclick="up4()" id="up4"></button>
+        <button onclick="up5()" id="up5"></button>
+    </body>
+</html>
