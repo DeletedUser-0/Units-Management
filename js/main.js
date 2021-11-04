@@ -37,7 +37,7 @@ class Player {
         };
 
         this.up3 = {
-            cost: data?.up3?.cost || 1e9,
+            cost: data?.up3?.cost || 1e5,
             level: data?.up3?.level || 0,
             effectexp: data?.up3?.effectexp || 1,
             effectbase: data?.up3?.effectbase || 1,
@@ -76,8 +76,8 @@ window.setInterval(function() {
         player.mult.next = OmegaNum.pow(1.4, OmegaNum.log10(player.x)).pow(OmegaNum.pow(player.up4.effect, OmegaNum.log10(player.x).sub(5)));
     };
     player.units.use = OmegaNum.add(player.units.base, player.units.exp);
-    player.calc.base = OmegaNum.times(4, player.units.base).sub(OmegaNum.times(OmegaNum.times(2, player.up3.effectbase), player.calc.term)).add(OmegaNum.times(2, player.up3.effectbase));
-    player.calc.exp = OmegaNum.logBase(OmegaNum.times(player.units.exp, player.calc.term), OmegaNum.pow(8, player.up3.effectexp)).add(0.5);
+    player.calc.base = OmegaNum.times(3.6, player.units.base).sub(OmegaNum.times(OmegaNum.times(2, player.up3.effectbase), player.calc.term)).add(OmegaNum.times(2, player.up3.effectbase));
+    player.calc.exp = OmegaNum.logBase(OmegaNum.times(player.units.exp, player.calc.term), OmegaNum.pow(7, player.up3.effectexp)).add(0.5);
     player.calc.result = OmegaNum.pow(player.calc.base, player.calc.exp);
     if (player.cooldown < 0) {
         player.cooldown = 0;
@@ -288,7 +288,7 @@ function resetgame() {
     player.up1.effect = 1;
     player.up2.cost = 5000;
     player.up2.level = 0;
-    player.up3.cost = 1e9;
+    player.up3.cost = 1e5;
     player.up3.level = 0;
     player.up3.effectbase = 1;
     player.up3.effectexp = 1;
